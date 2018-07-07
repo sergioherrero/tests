@@ -5,10 +5,10 @@ pipeline {
       steps {
         echo 'hello world'
       }
-    }
-    post {
-      always {
-        echo 'post hello world'
+      post {
+        always {
+          echo 'post hello world'
+        }
       }
     }
     stage('step 2') {
