@@ -1,19 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('step 1') {
+    stage('Build') {
       steps {
-        echo 'hello world'
-      }
-      post {
-        always {
-          echo 'post hello world'
-        }
+        sh 'docker build -t app .'
       }
     }
-    stage('step 2') {
+    stage('Test') {
       steps {
-        echo 'hello world 2'
+        echo 'TEST'
+      }
+    }
+    stage ('Deploy') {
+      steps {
+        echo 'DEPLOY'
       }
     }
   }
