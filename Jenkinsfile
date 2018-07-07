@@ -6,5 +6,15 @@ pipeline {
         echo 'hello world'
       }
     }
+    post {
+      always {
+        echo 'post hello world'
+      }
+    }
+    stage('step 2') {
+      steps {
+        echo 'hello world 2'
+      }
+    }
   }
 }
