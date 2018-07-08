@@ -20,7 +20,7 @@ pipeline {
     }
     stage ('Push Registry') {
       steps {
-        withCredentials([usernamePassword(credentialsId: 'docker-key', passwordVariable: 'password', usernameVariable: 'user')]) {
+        withDockerRegistry([ credentialsId: "docker-key", url: "" ]) {
           sh 'docker tag app:test sergioherrero/app:stable'
           sh 'docker push sergioherrero/app:stable'
         }
