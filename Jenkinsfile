@@ -9,7 +9,7 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Test'
-        sh 'docker run -it app'
+        sh 'docker run -d app'
         sh '/bin/nc -vz localhost 80'
       }
       post {
@@ -20,7 +20,7 @@ pipeline {
     }
     stage ('Push Registry') {
       steps {
-        sh 'docker tag app:test sergioherrero/app:stable'
+        sh 'docker tag app sergioherrero/app:stable'
         sh 'docker push sergioherrero/app:stable'
       }
     }
