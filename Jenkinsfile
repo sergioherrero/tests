@@ -3,18 +3,18 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t app:test .'
+        sh 'docker build -t app .'
       }
     }
     stage('Test') {
       steps {
         echo 'Test'
-        sh 'docker run --rm --name app -id -p 80:80 app:test'
+        sh 'docker run -it app'
         sh '/bin/nc -vz localhost 80'
       }
       post {
         always {
-          sh 'docker container stop app'
+          sh 'docker stop app'
         }
       }
     }
