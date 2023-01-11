@@ -26,17 +26,10 @@ This will create an instance of:
 
 ## Running Config Server.
 
-Config server needs a `GitHub` repository in order to run. If you want to try locally:
+Github configuration:
 
-```
-    cd git-config
-    git init
-```
-
-In the Java properties replace this:
-
-```
-    spring.cloud.config.server.git.uri=file:///Users/your/folder/name
+````
+    https://github.com/sergioherrero/tests-configurations
 ```
 
 ## Running locally
