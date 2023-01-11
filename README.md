@@ -42,7 +42,7 @@ This will create an instance of:
 
 Github configuration:
 
-````
+```
     https://github.com/sergioherrero/tests-configurations
 ```
 
