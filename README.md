@@ -28,10 +28,10 @@
 ## Running docker
 
 This will create an instance of:
-1. Kafka            - 9092
-2. Zookeeper        - 2181
-3. Prometheus       - 9090
-4. Grafana          - 3000
+1. Kafka            
+2. Zookeeper        
+3. Prometheus       
+4. Grafana          
 
 ```
     cd docker-dependencies
