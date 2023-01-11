@@ -51,3 +51,21 @@ Github configuration:
 Once Docker is running, just run every main class from the project. 
 
 Remember to set up you Java version.
+
+## Access Eureka webpanel
+
+```
+    http://localhost:8761/
+```
+
+## Access Prometheus webpanel
+
+```
+    http://localhost:9090/
+```
+
+## Access Grafana webpanel
+
+```
+    http://localhost:3000
+```
