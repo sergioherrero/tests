@@ -3,21 +3,21 @@
 
 1. Spring cloud
 2. Spring boot microservices
-   1. Config Server.
-   2. Eureka. 
+   1. Config Server - 8888
+   2. Eureka        - 8761
    3. Microservices
-      1. Guest Service
-      2. Reservation Service
-      3. Room Reservation Service
-      4. Room Service
+      1. Guest Service              - 8081
+      2. Reservation Service        - 8082
+      3. Room Reservation Service   - 8080
+      4. Room Service               - 8083
 
 ## Running docker
 
 This will create an instance of:
-1. Kafka
-2. Zookeeper
-3. Prometheus
-4. Grafana
+1. Kafka            - 9092
+2. Zookeeper        - 2181
+3. Prometheus       - 9090
+4. Grafana          - 3000
 
 ```
     cd docker-dependencies
