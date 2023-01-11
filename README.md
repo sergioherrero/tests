@@ -5,10 +5,10 @@
    1. Config Server
    2. Eureka
    3. Microservices
-      1. Guest Service              - 8081
-      2. Reservation Service        - 8082
-      3. Room Reservation Service   - 8080
-      4. Room Service               - 8083
+      1. Guest Service              
+      2. Reservation Service       
+      3. Room Reservation Service   
+      4. Room Service               
 
 ## Port list:
 
