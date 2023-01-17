@@ -4,11 +4,8 @@ import com.example.company.roomservice.data.Room;
 import com.example.company.roomservice.data.RoomDto;
 import com.example.company.roomservice.error.NotFoundException;
 import com.example.company.roomservice.repository.RoomRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 

@@ -55,7 +55,7 @@ public class RoomControllerTest {
     }
 
     @Test
-    public void create_room_should_return_ok()  {
+    public void create_room_should_return_created()  {
 
         RoomDto roomDto = RoomDto.builder()
                 .roomId(1)
@@ -75,7 +75,7 @@ public class RoomControllerTest {
     }
 
     @Test
-    public void update_room_should_return_ok() {
+    public void update_room_should_return_no_content() {
         RoomDto roomDto = RoomDto.builder()
                 .roomId(1)
                 .name("name")
@@ -90,5 +90,15 @@ public class RoomControllerTest {
                 .put("/rooms/" + 1)
                 .then()
                 .statusCode(HttpStatus.NO_CONTENT.value());
+    }
+
+    @Test
+    public void delete_room_should_return_reset_content() {
+
+        given()
+                .when()
+                .delete("/rooms/" + 1)
+                .then()
+                .statusCode(HttpStatus.RESET_CONTENT.value());
     }
 }

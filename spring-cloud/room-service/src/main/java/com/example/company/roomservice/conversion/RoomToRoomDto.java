@@ -3,7 +3,6 @@ package com.example.company.roomservice.conversion;
 import com.example.company.roomservice.data.Room;
 import com.example.company.roomservice.data.RoomDto;
 import org.springframework.core.convert.converter.Converter;
-import org.springframework.stereotype.Component;
 
 public class RoomToRoomDto implements Converter<Room, RoomDto> {
 

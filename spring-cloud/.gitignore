@@ -1,3 +1,9 @@
 .DS_Store
 .idea
 *.class
+room-service/target
+room-reservation-service/target
+guest-service/target
+reservation-service/target
+config-server/target
+eureka-server/target
