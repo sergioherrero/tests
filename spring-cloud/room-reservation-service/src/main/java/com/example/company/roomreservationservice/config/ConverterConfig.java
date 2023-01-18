@@ -1,6 +1,6 @@
-package com.example.company.roomservice.config;
+package com.example.company.roomreservationservice.config;
 
-import com.example.company.roomservice.converter.RoomToDto;
+import com.example.company.roomreservationservice.converter.RoomReservationToDto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -13,7 +13,7 @@ public class ConverterConfig {
     @Primary
     public ConversionService conversionService() {
         DefaultConversionService service = new DefaultConversionService();
-        service.addConverter(new RoomToDto());
+        service.addConverter(new RoomReservationToDto());
         return service;
     }
 

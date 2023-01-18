@@ -1,4 +1,4 @@
-package com.example.company.roomreservationservice.api;
+package com.example.company.roomreservationservice.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
