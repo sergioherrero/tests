@@ -1,4 +1,4 @@
-package com.example.company.guestservice.data;
+package com.example.company.guestservice.infrastructure.output.entity.h2;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Guest {
+public class GuestH2 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "GUEST_ID")
