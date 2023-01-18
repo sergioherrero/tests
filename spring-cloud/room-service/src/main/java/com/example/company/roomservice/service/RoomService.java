@@ -4,8 +4,6 @@ import com.example.company.roomservice.data.Room;
 import com.example.company.roomservice.data.RoomDto;
 import com.example.company.roomservice.error.NotFoundException;
 import com.example.company.roomservice.repository.RoomRepository;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 
@@ -13,24 +11,23 @@ import java.util.List;
 import java.util.stream.StreamSupport;
 
 @Service
-@RefreshScope
 public class RoomService {
-
-    @Value("${test.property}")
-    private String testProperty;
 
     private final RoomRepository roomRepository;
 
     private final ConversionService convert;
 
+    private final RefreshScopedService refreshScopedService;
 
-    public RoomService(RoomRepository roomRepository, ConversionService convert) {
+
+    public RoomService(RoomRepository roomRepository, ConversionService convert, RefreshScopedService refreshScopedService) {
         this.roomRepository = roomRepository;
         this.convert = convert;
+        this.refreshScopedService = refreshScopedService;
     }
 
     public List<RoomDto> findAll() {
-        System.out.println(testProperty);
+        System.out.println(refreshScopedService.getTestProperty());
         return StreamSupport.stream(this.roomRepository.findAll().spliterator(), false)
                 .map(room -> convert.convert(room, RoomDto.class))
                 .toList();

@@ -1,10 +1,10 @@
-package com.example.company.roomservice.conversion;
+package com.example.company.roomservice.converter;
 
 import com.example.company.roomservice.data.Room;
 import com.example.company.roomservice.data.RoomDto;
 import org.springframework.core.convert.converter.Converter;
 
-public class RoomToRoomDto implements Converter<Room, RoomDto> {
+public class RoomToDto implements Converter<Room, RoomDto> {
 
     @Override
     public RoomDto convert(Room room) {
