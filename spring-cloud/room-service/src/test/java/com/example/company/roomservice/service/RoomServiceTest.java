@@ -34,6 +34,9 @@ public class RoomServiceTest {
     @InjectMocks
     RoomService roomService;
 
+    @Mock
+    RefreshScopedService refreshScopedService;
+
     @Test
     public void when_find_all_should_return_room_list_dto() {
 
