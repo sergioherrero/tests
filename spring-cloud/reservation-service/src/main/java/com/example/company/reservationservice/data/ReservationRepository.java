@@ -4,10 +4,10 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.sql.Date;
 
-public interface ReservationRepository extends CrudRepository<ReservationEntity, Long> {
-    Iterable<ReservationEntity> findReservationEntitiesByGuestId(long guestId);
+public interface ReservationRepository extends CrudRepository<Reservation, Long> {
+    Iterable<Reservation> findReservationEntitiesByGuestId(long guestId);
 
-    Iterable<ReservationEntity> findReservationEntitiesByDate(Date date);
+    Iterable<Reservation> findReservationEntitiesByDate(Date date);
 
-    Iterable<ReservationEntity> findReservationEntitiesByDateAndGuestId(Date date, long guestId);
+    Iterable<Reservation> findReservationEntitiesByDateAndGuestId(Date date, long guestId);
 }
