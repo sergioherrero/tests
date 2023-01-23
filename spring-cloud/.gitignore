@@ -7,3 +7,5 @@ guest-service/target
 reservation-service/target
 config-server/target
 eureka-server/target
+
+docker-dependencies/keycloak/postgres-data
